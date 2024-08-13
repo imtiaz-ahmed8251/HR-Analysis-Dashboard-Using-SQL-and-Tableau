@@ -6,10 +6,11 @@
 3. [Objectives](#3-objectives)
 4. [Data Source and Database Setup](#4-data-source-and-database-setup)
 5. [Dashboard Development in Tableau](#5-dashboard-development-in-tableau)
-6. [Quality Assurance and Validation](#6-quality-assurance-and-validation)
-7. [Key Features and Visualizations](#7-key-features-and-visualizations)
-8. [SQL Validation Queries](#8-sql-validation-queries)
-9. [Conclusion and Future Scope](#9-conclusion-and-future-scope)
+6. [Dashboard](#6-Dashboard)
+7. [Quality Assurance and Validation](#6-quality-assurance-and-validation)
+8. [Key Features and Visualizations](#7-key-features-and-visualizations)
+9. [SQL Validation Queries](#8-sql-validation-queries)
+10. [Conclusion and Future Scope](#9-conclusion-and-future-scope)
 
 ## 1. Introduction
 
@@ -68,7 +69,12 @@ The HR Analytics Dashboard was created in Tableau following these steps:
 5. Interactivity Implementation: Added filters and action filters for dynamic data exploration.
 6. Performance Optimization: Ensured efficient data retrieval and dashboard responsiveness.
 
-## 6. Quality Assurance and Validation
+## 6. Dashboard 
+The image shows a sample HR dashboard displaying key metrics and trends extracted from the HR data analysis.
+
+![HR Dashboard](HR Analytics Dashboard.png) 
+
+## 7. Quality Assurance and Validation
 
 Our QA process involves three main components:
 
@@ -76,7 +82,7 @@ Our QA process involves three main components:
 2. Data Validation: Comparing dashboard data with SQL query results.
 3. Test Documentation: Creating a comprehensive test document with screenshots and SQL queries.
 
-## 7. Key Features and Visualizations
+## 8. Key Features and Visualizations
 
 The dashboard includes the following key features and visualizations:
 
@@ -91,11 +97,11 @@ The dashboard includes the following key features and visualizations:
 9. Attrition Rate by Gender for Different Age Groups (Donut Charts)
 10. Job Satisfaction Rating (Heat Map)
 
-## 8. SQL Validation Queries
+## 9. SQL Validation Queries
 
 To ensure data accuracy, we use the following SQL queries for validation:
 
-### 8.1 Attrition Rate and Percentage by Department
+### 9.1 Attrition Rate and Percentage by Department
 
 ```sql
 SELECT department, COUNT(attrition) AS attrition_count, 
@@ -107,7 +113,7 @@ GROUP BY department
 ORDER BY attrition_count DESC;
 ```
 
-### 8.2 Number of Employees by Age
+### 9.2 Number of Employees by Age
 
 ```sql
 SELECT age, COUNT(employee_count) AS employee_count
@@ -116,7 +122,7 @@ GROUP BY age
 ORDER BY age;
 ```
 
-### 8.3 Education Field-wise Attrition
+### 9.3 Education Field-wise Attrition
 
 ```sql
 SELECT education_field, COUNT(attrition)
@@ -126,7 +132,7 @@ GROUP BY education_field
 ORDER BY COUNT(attrition) DESC;
 ```
 
-### 8.4 Attrition Rate by Gender for Different Age Groups
+### 9.4 Attrition Rate by Gender for Different Age Groups
 
 ```sql
 SELECT gender, age_band, COUNT(attrition) AS attrition, 
@@ -138,7 +144,7 @@ GROUP BY gender, age_band
 ORDER BY age_band;
 ```
 
-### 8.5 Job Satisfaction by Job Role
+### 9.5 Job Satisfaction by Job Role
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS tablefunc;
@@ -153,7 +159,7 @@ FROM crosstab(
 ORDER BY job_role;
 ```
 
-## 9. Conclusion and Future Scope
+## 10. Conclusion and Future Scope
 
 The HR Data Analysis Dashboard provides a powerful tool for HR professionals to gain insights into workforce dynamics, identify trends, and make data-driven decisions. By leveraging Tableau's visualization capabilities and PostgreSQL's robust data management, we've created a solution that enhances HR operations and supports strategic workforce planning.
 
