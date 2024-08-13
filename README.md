@@ -72,7 +72,7 @@ The HR Analytics Dashboard was created in Tableau following these steps:
 ## 6. Dashboard 
 The image shows a sample HR dashboard displaying key metrics and trends extracted from the HR data analysis.
 
-![HR Dashboard](HR Analytics Dashboard.png) 
+![HR Dashboard](HR_Analytics_Dashboard.png)
 
 ## 7. Quality Assurance and Validation
 
